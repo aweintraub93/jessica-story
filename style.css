@@ -1,0 +1,207 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+
+
+/* THIS LINE LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/* Start your base/mobile styles here */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+    font-family: Arial, Helvetica
+}
+section {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    text-align: left;
+  }
+
+h1, p{
+  text-align: left;
+}
+
+
+h1, h2{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+h2{
+  font-size: 18px;
+
+
+}
+
+div.hotspot{
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+div.hotspot img{
+    width: 100%;
+}
+
+div.modal{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 200%;
+  left: 0;
+  padding: 1em;
+  background-color: rgba(0,0,0,0.65);
+  transition: top 0.5s ease-in-out;
+}
+
+div.modal.active{
+  top: 0;
+}
+
+div.modal div.inner{
+  height: 50%;
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 1em;
+  font-size: 20px;
+  text-align: center;
+}
+
+.spot{
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #000000;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+
+}
+
+
+#audio {
+  top: 31%;
+  right: 13%;
+  background-color: #FFFFFF;
+
+}
+
+#metoo {
+  top: 33%;
+  right: 78.5%;
+  background-color: #D64B3E;
+
+}
+
+#title9 {
+  top: 33%;
+  right: 47%;
+  background-color: #D64B3E;
+
+}
+
+#alyraisman {
+  top: 33%;
+  right: 15.5%;
+  background-color: #D64B3E;
+
+}
+
+/* Tablet/Desktop overrides */
+
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here. Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+    .spot{
+    height: 50px; /*changes dot size for ipad*/
+    width: 50px
+    }
+
+    html, body{
+      margin-top: 20px; /*responsive margins*/
+      margin-bottom: 20px;
+      font-size: 20px;
+
+    }
+
+h2{
+  font-size: 22px;
+}
+    .spot{
+    height: 50px; /*changes dot size for responsive*/
+    width: 50px;
+    }
+
+    html, body{
+      margin-top: 20px; /*responsive margins*/
+      margin-bottom: 20px;
+      font-size: 20px;
+
+    }
+    #metoo{
+      top: 34.5%; /*dot adjustments*/
+      right: 79.25%;
+    }
+
+    #title9 {
+      top: 34.5%;
+      right: 48%;
+
+    }
+    #alyraisman {
+      top: 34.5%;
+      right: 16.5%;
+
+    }
+
+    div.modal div.inner{
+      font-size: 30px;
+
+
+}
+
+
+@media(min-width: 729px) {
+  .spot{
+  height: 50px; /*changes dot size for responsive*/
+  width: 50px;
+  }
+
+  html, body{
+    margin-top: 20px; /*responsive margins*/
+    margin-bottom: 20px;
+    margin-left: 125px;
+    margin-right: 125px;
+    font-size: 20px;
+
+  }
+  #ambulance {
+    top: 8%; /*dot adjustments*/
+    left: 55%;
+  }
+
+  #front {
+    top: 62%;
+    right: 35%;
+
+  }
+
+
+    /* Any adjustments for desktop and larger go here. Note these styles will be applied to anything 729px or larger -- so desktop */
+}
